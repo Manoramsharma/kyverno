@@ -10,8 +10,8 @@ spec:
     context:
     - name: deploymentCount
       globalReference:
-        name: deployments
-        jmesPath: "items | length(@)"
+        name: non-existent-reference
+        jmesPath: "length(@)"
     match:
       all:
       - resources:

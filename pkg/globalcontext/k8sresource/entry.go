@@ -18,6 +18,7 @@ type entry struct {
 	stop   func()
 }
 
+// TODO: error handling
 func New(ctx context.Context, client dynamic.Interface, gvr schema.GroupVersionResource, namespace string) (*entry, error) {
 	indexers := cache.Indexers{
 		cache.NamespaceIndex: cache.MetaNamespaceIndexFunc,

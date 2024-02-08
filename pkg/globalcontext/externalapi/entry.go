@@ -2,7 +2,6 @@ package externalapi
 
 import (
 	"context"
-	"fmt"
 	"sync"
 	"time"
 
@@ -15,7 +14,6 @@ import (
 type entry struct {
 	sync.Mutex
 	data any
-	err  error
 	stop func()
 }
 
@@ -41,13 +39,12 @@ func New(
 	group.StartWithContext(ctx, func(ctx context.Context) {
 		// TODO: make sure we have called it at least once before returning
 		config := apicall.NewAPICallConfiguration(maxResponseLength)
-		caller := apicall.NewCaller(logger, "globalcontext", client, config)
+		caller := apicall.NewCaller(logger, "TODO", client, config)
 		wait.UntilWithContext(ctx, func(ctx context.Context) {
 			if data, err := doCall(ctx, caller, call); err != nil {
 				logger.Error(err, "failed to get data from api caller")
-				e.setData(nil, err)
 			} else {
-				e.setData(data, nil)
+				e.setData(data)
 			}
 		}, period)
 	})
@@ -57,15 +54,6 @@ func New(
 func (e *entry) Get() (any, error) {
 	e.Lock()
 	defer e.Unlock()
-
-	if e.err != nil {
-		return nil, e.err
-	}
-
-	if e.data == nil {
-		return nil, fmt.Errorf("no data available")
-	}
-
 	return e.data, nil
 }
 
@@ -75,15 +63,10 @@ func (e *entry) Stop() {
 	e.stop()
 }
 
-func (e *entry) setData(data any, err error) {
+func (e *entry) setData(data any) {
 	e.Lock()
 	defer e.Unlock()
-
-	if err != nil {
-		e.err = err
-	} else {
-		e.data = data
-	}
+	e.data = data
 }
 
 func doCall(ctx context.Context, caller apicall.Caller, call kyvernov1.APICall) (any, error) {
