@@ -212,8 +212,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: admissionreports.kyverno.io
@@ -859,8 +859,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: backgroundscanreports.kyverno.io
@@ -1440,8 +1440,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: cleanuppolicies.kyverno.io
@@ -5238,8 +5238,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clusteradmissionreports.kyverno.io
@@ -5887,8 +5887,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clusterbackgroundscanreports.kyverno.io
@@ -6468,8 +6468,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clustercleanuppolicies.kyverno.io
@@ -10266,8 +10266,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clusterpolicies.kyverno.io
@@ -13850,7 +13850,7 @@ spec:
                               description: Version defines the Pod Security Standard
                                 versions that Kubernetes supports. Allowed values
                                 are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24, v1.25,
-                                v1.26, latest. Defaults to latest.
+                                v1.26, v1.27, v1.28, v1.29, latest. Defaults to latest.
                               enum:
                               - v1.19
                               - v1.20
@@ -13860,6 +13860,9 @@ spec:
                               - v1.24
                               - v1.25
                               - v1.26
+                              - v1.27
+                              - v1.28
+                              - v1.29
                               - latest
                               type: string
                           type: object
@@ -18502,7 +18505,8 @@ spec:
                                   description: Version defines the Pod Security Standard
                                     versions that Kubernetes supports. Allowed values
                                     are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24,
-                                    v1.25, v1.26, latest. Defaults to latest.
+                                    v1.25, v1.26, v1.27, v1.28, v1.29, latest. Defaults
+                                    to latest.
                                   enum:
                                   - v1.19
                                   - v1.20
@@ -18512,6 +18516,9 @@ spec:
                                   - v1.24
                                   - v1.25
                                   - v1.26
+                                  - v1.27
+                                  - v1.28
+                                  - v1.29
                                   - latest
                                   type: string
                               type: object
@@ -22868,7 +22875,7 @@ spec:
                               description: Version defines the Pod Security Standard
                                 versions that Kubernetes supports. Allowed values
                                 are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24, v1.25,
-                                v1.26, latest. Defaults to latest.
+                                v1.26, v1.27, v1.28, v1.29, latest. Defaults to latest.
                               enum:
                               - v1.19
                               - v1.20
@@ -22878,6 +22885,9 @@ spec:
                               - v1.24
                               - v1.25
                               - v1.26
+                              - v1.27
+                              - v1.28
+                              - v1.29
                               - latest
                               type: string
                           type: object
@@ -27494,7 +27504,8 @@ spec:
                                   description: Version defines the Pod Security Standard
                                     versions that Kubernetes supports. Allowed values
                                     are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24,
-                                    v1.25, v1.26, latest. Defaults to latest.
+                                    v1.25, v1.26, v1.27, v1.28, v1.29, latest. Defaults
+                                    to latest.
                                   enum:
                                   - v1.19
                                   - v1.20
@@ -27504,6 +27515,9 @@ spec:
                                   - v1.24
                                   - v1.25
                                   - v1.26
+                                  - v1.27
+                                  - v1.28
+                                  - v1.29
                                   - latest
                                   type: string
                               type: object
@@ -28551,8 +28565,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: globalcontextentries.kyverno.io
@@ -28569,7 +28583,11 @@ spec:
     singular: globalcontextentry
   scope: Cluster
   versions:
-  - name: v2alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type == "Ready")].status
+      name: READY
+      type: string
+    name: v2alpha1
     schema:
       openAPIV3Schema:
         description: GlobalContextEntry declares resources to be cached.
@@ -28744,6 +28762,8 @@ spec:
         type: object
     served: true
     storage: true
+    subresources:
+      status: {}
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -28753,8 +28773,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: policies.kyverno.io
@@ -32338,7 +32358,7 @@ spec:
                               description: Version defines the Pod Security Standard
                                 versions that Kubernetes supports. Allowed values
                                 are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24, v1.25,
-                                v1.26, latest. Defaults to latest.
+                                v1.26, v1.27, v1.28, v1.29, latest. Defaults to latest.
                               enum:
                               - v1.19
                               - v1.20
@@ -32348,6 +32368,9 @@ spec:
                               - v1.24
                               - v1.25
                               - v1.26
+                              - v1.27
+                              - v1.28
+                              - v1.29
                               - latest
                               type: string
                           type: object
@@ -36991,7 +37014,8 @@ spec:
                                   description: Version defines the Pod Security Standard
                                     versions that Kubernetes supports. Allowed values
                                     are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24,
-                                    v1.25, v1.26, latest. Defaults to latest.
+                                    v1.25, v1.26, v1.27, v1.28, v1.29, latest. Defaults
+                                    to latest.
                                   enum:
                                   - v1.19
                                   - v1.20
@@ -37001,6 +37025,9 @@ spec:
                                   - v1.24
                                   - v1.25
                                   - v1.26
+                                  - v1.27
+                                  - v1.28
+                                  - v1.29
                                   - latest
                                   type: string
                               type: object
@@ -41358,7 +41385,7 @@ spec:
                               description: Version defines the Pod Security Standard
                                 versions that Kubernetes supports. Allowed values
                                 are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24, v1.25,
-                                v1.26, latest. Defaults to latest.
+                                v1.26, v1.27, v1.28, v1.29, latest. Defaults to latest.
                               enum:
                               - v1.19
                               - v1.20
@@ -41368,6 +41395,9 @@ spec:
                               - v1.24
                               - v1.25
                               - v1.26
+                              - v1.27
+                              - v1.28
+                              - v1.29
                               - latest
                               type: string
                           type: object
@@ -45984,7 +46014,8 @@ spec:
                                   description: Version defines the Pod Security Standard
                                     versions that Kubernetes supports. Allowed values
                                     are v1.19, v1.20, v1.21, v1.22, v1.23, v1.24,
-                                    v1.25, v1.26, latest. Defaults to latest.
+                                    v1.25, v1.26, v1.27, v1.28, v1.29, latest. Defaults
+                                    to latest.
                                   enum:
                                   - v1.19
                                   - v1.20
@@ -45994,6 +46025,9 @@ spec:
                                   - v1.24
                                   - v1.25
                                   - v1.26
+                                  - v1.27
+                                  - v1.28
+                                  - v1.29
                                   - latest
                                   type: string
                               type: object
@@ -47041,8 +47075,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: policyexceptions.kyverno.io
@@ -48997,8 +49031,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: updaterequests.kyverno.io
@@ -49795,8 +49829,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clusterephemeralreports.reports.kyverno.io
@@ -50142,8 +50176,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: ephemeralreports.reports.kyverno.io
@@ -50489,8 +50523,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: clusterpolicyreports.wgpolicyk8s.io
@@ -50856,8 +50890,8 @@ metadata:
     app.kubernetes.io/instance: kyverno
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: kyverno-crds
-    app.kubernetes.io/version: v0.0.0
-    helm.sh/chart: crds-v0.0.0
+    app.kubernetes.io/version: 3.2.0-alpha.1
+    helm.sh/chart: crds-3.2.0-alpha.1
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.0
   name: policyreports.wgpolicyk8s.io
@@ -51279,6 +51313,8 @@ rules:
       - clusterpolicies/status
       - updaterequests
       - updaterequests/status
+      - globalcontextentries
+      - globalcontextentries/status
       - admissionreports
       - clusteradmissionreports
       - backgroundscanreports
@@ -51293,13 +51329,6 @@ rules:
       - update
       - watch
       - deletecollection
-  - apiGroups:
-      - kyverno.io
-    resources:
-      - globalcontextentries
-    verbs:
-      - list
-      - watch
   - apiGroups:
       - reports.kyverno.io
     resources:
@@ -51414,6 +51443,8 @@ rules:
       - policyexceptions
       - updaterequests
       - updaterequests/status
+      - globalcontextentries
+      - globalcontextentries/status
     verbs:
       - create
       - delete
@@ -51423,13 +51454,6 @@ rules:
       - update
       - watch
       - deletecollection
-  - apiGroups:
-      - kyverno.io
-    resources:
-      - globalcontextentries
-    verbs:
-      - list
-      - watch
   - apiGroups:
       - ''
     resources:
@@ -51556,9 +51580,16 @@ rules:
       - kyverno.io
     resources:
       - globalcontextentries
+      - globalcontextentries/status
     verbs:
+      - create
+      - delete
+      - get
       - list
+      - patch
+      - update
       - watch
+      - deletecollection
   - apiGroups:
       - kyverno.io
     resources:
@@ -51867,12 +51898,7 @@ rules:
       - kyverno.io
     resources:
       - globalcontextentries
-    verbs:
-      - list
-      - watch
-  - apiGroups:
-      - kyverno.io
-    resources:
+      - globalcontextentries/status
       - admissionreports
       - clusteradmissionreports
       - backgroundscanreports
@@ -52947,7 +52973,7 @@ spec:
             - --v=2
             - --omitEvents=PolicyApplied,PolicySkipped
             - --enablePolicyException=true
-            - --reportsChunkSize=1000
+            - --reportsChunkSize=0
             - --allowInsecureRegistry=false
             - --registryCredentialHelpers=default,google,amazon,azure,github
             

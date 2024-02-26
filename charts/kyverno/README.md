@@ -2,7 +2,7 @@
 
 Kubernetes Native Policy Management
 
-![Version: v0.0.0](https://img.shields.io/badge/Version-v0.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 3.2.0-alpha.1](https://img.shields.io/badge/Version-3.2.0--alpha.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.12.0-alpha.1](https://img.shields.io/badge/AppVersion-v1.12.0--alpha.1-informational?style=flat-square)
 
 ## About
 
@@ -343,7 +343,7 @@ The chart values are organised per component.
 | features.protectManagedResources.enabled | bool | `false` | Enables the feature |
 | features.registryClient.allowInsecure | bool | `false` | Allow insecure registry |
 | features.registryClient.credentialHelpers | list | `["default","google","amazon","azure","github"]` | Enable registry client helpers |
-| features.reports.chunkSize | int | `1000` | Reports chunk size |
+| features.reports.chunkSize | int | `0` | Reports chunk size |
 | features.ttlController.reconciliationInterval | string | `"1m"` | Reconciliation interval for the label based cleanup manager |
 | features.tuf.enabled | bool | `false` | Enables the feature |
 | features.tuf.root | string | `nil` | Tuf root |
@@ -856,8 +856,8 @@ Kubernetes: `>=1.25.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-|  | crds | v0.0.0 |
-|  | grafana | v0.0.0 |
+|  | crds | 3.2.0-alpha.1 |
+|  | grafana | 3.2.0-alpha.1 |
 
 ## Maintainers
 
